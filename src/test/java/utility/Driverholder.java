@@ -2,7 +2,7 @@ package utility;
 
 import org.openqa.selenium.WebDriver;
 
-public class DriverHolder {
+public class Driverholder {
 
     private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
@@ -11,6 +11,6 @@ public class DriverHolder {
     }
 
     public static void setDriver(WebDriver driver) {
-        DriverHolder.driver.set(driver);
+        Driverholder.driver.set(driver);
     }
 }

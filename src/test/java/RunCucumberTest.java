@@ -6,8 +6,7 @@ import org.testng.annotations.DataProvider;
 
 
 //@RunWith(Cucumber.class)
-    @CucumberOptions(plugin = { "pretty", "html:target/cucumber-html-reports", "io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm",
-            "json:target/cucumber-html-reports/cucumber.json","rerun:target/failed_scenarios.txt" },
+    @CucumberOptions(plugin = { "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"},
                     monochrome = true,
                     glue = "stepdefinitions",
                     features = "src/test/java/features")

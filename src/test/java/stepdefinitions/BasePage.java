@@ -5,7 +5,7 @@ import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import utility.DriverHolder;
+import utility.Driverholder;
 
 public class BasePage {
     public WebDriver driver;
@@ -14,12 +14,12 @@ public class BasePage {
     public void setup(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        DriverHolder.setDriver(driver);
+        Driverholder.setDriver(driver);
     }
 
     @After
     public void teardown(){
-        DriverHolder.getDriver().quit();
+        Driverholder.getDriver().quit();
     }
 
 }
